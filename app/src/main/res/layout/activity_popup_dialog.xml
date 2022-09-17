@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/popup_window_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/activityTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="1 de septiembre - Día 1"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/activity_popup_description"
+            android:textColor="#757575"
+            tools:text="Información de actividad física" />
+
+        <Spinner
+            android:id="@+id/activitySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/box_border"
+            android:entries="@android:array/organizationTypes"
+            android:labelFor="@id/activityTitle"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown"
+            android:textAlignment="textStart" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/calInput"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:autoText="false"
+                android:background="@drawable/box_border"
+                android:ems="10"
+                android:hint="Cal"
+                android:inputType="number"
+                android:numeric="integer"
+                android:paddingStart="7dp"
+                android:textColor="@color/secondary_text_color"
+                android:textColorHint="#757575" />
+
+            <EditText
+                android:id="@+id/kmInput"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/box_border"
+                android:ems="10"
+                android:hint="Km"
+                android:inputType="number|numberDecimal"
+                android:numeric="decimal"
+                android:paddingStart="7dp"
+                android:textColor="@color/secondary_text_color"
+                android:textColorHint="#757575" />
+
+            <EditText
+                android:id="@+id/timeInput"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/box_border"
+                android:ems="10"
+                android:hint="@string/activity_popup_time_hint"
+                android:inputType="number|numberDecimal"
+                android:numeric="decimal"
+                android:paddingStart="7dp"
+                android:textColor="@color/secondary_text_color"
+                android:textColorHint="#757575" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/activity_popup_additional_notes"
+            android:textColor="#757575" />
+
+        <EditText
+            android:id="@+id/editTextTextPostalAddress"
+            android:layout_width="match_parent"
+            android:layout_height="133dp"
+            android:background="@drawable/box_rounded_border"
+            android:ems="10"
+            android:inputType="textPostalAddress" />
+
+        <Button
+            android:id="@+id/activitySubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/popup_button_text" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

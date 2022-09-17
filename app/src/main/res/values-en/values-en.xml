@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Practice app</string>
+
+    <string name="monday">Mon</string>
+    <string name="tuesday">Tue</string>
+    <string name="wednesday">Wed</string>
+    <string name="thursday">Thu</string>
+    <string name="friday">Fri</string>
+    <string name="saturday">Sat</string>
+    <string name="sunday">Sun</string>
+
+    <string name="popup_date_format">%d of %s</string>
+    <string name="popup_button_text">Done</string>
+
+    <string name="weight_popup_description">Let´s check your progress. Use an scale and write down your weight on the field below</string>
+    <string name="weight_toast_text">Introduce a weight value</string>
+
+    <string name="activity_popup_time_hint">Time</string>
+    <string name="activity_popup_description">Physical activity information</string>
+    <string name="activity_popup_additional_notes">Additional notes</string>
+    <string name="activity_toast_text">Missing values</string>
+</resources>

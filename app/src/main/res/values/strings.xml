@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">App de prueba</string>
+    <string name="forward" translatable="false"><![CDATA[->]]></string>
+    <string name="backward" translatable="false"><![CDATA[<-]]></string>
+
+    <string name="monday">Lun</string>
+    <string name="tuesday">Mar</string>
+    <string name="wednesday">Mie</string>
+    <string name="thursday">Jue</string>
+    <string name="friday">Vie</string>
+    <string name="saturday">Sab</string>
+    <string name="sunday">Dom</string>
+
+    <string name="popup_date_format">%d de %s</string>
+    <string name="popup_button_text">Listo</string>
+
+    <string name="weight_popup_description">Comprobemos tu progreso. Súbete a una báscula y anota tu peso a continuación:</string>
+    <string name="weight_toast_text">Introduce un peso</string>
+
+    <string name="activity_popup_time_hint">Tiempo</string>
+    <string name="activity_popup_description">Información de actividad física</string>
+    <string name="activity_popup_additional_notes">Notas adicionales</string>
+    <string name="activity_toast_text">Faltan valores</string>
+</resources>
