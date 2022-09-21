@@ -26,7 +26,7 @@ import java.util.Locale;
 public class ActivityPopup extends AbstractPopup{
     private final DailyActivity activitySelected;
     private LocalDate date;
-    private Spinner weightSpinner;
+    private Spinner activitySpinner;
     private EditText calInput;
     private EditText kmInput;
     private EditText tmpInput;
@@ -57,8 +57,10 @@ public class ActivityPopup extends AbstractPopup{
         calInput = this.findViewById(R.id.calInput);
         kmInput = this.findViewById(R.id.kmInput);
         tmpInput = this.findViewById(R.id.timeInput);
+        activitySpinner = this.findViewById(R.id.activitySpinner);
 
         if (activitySelected.activity >= 1){
+            activitySpinner.setSelection(activitySelected.activity - 1);
             calInput.setText(String.valueOf(activitySelected.calories) + " Cal");
             kmInput.setText(String.valueOf(activitySelected.kilometres) + " Kg");
             tmpInput.setText(String.valueOf(activitySelected.time) + " H");
@@ -72,7 +74,7 @@ public class ActivityPopup extends AbstractPopup{
             Toast.makeText(this.getContext(), this.getContext().getString(R.string.activity_toast_text), Toast.LENGTH_SHORT).show();
         }
         else {
-            activitySelected.activity = 1;
+            activitySelected.activity = activitySpinner.getPositionForView(activitySpinner.getSelectedView()) + 1;
             activitySelected.calories = Integer.parseInt(calInput.getText().toString().replace("Cal", "").trim());
             activitySelected.kilometres = Float.parseFloat(kmInput.getText().toString().replace("Kg", "").trim());
             activitySelected.time = Float.parseFloat(tmpInput.getText().toString().replace(" H", "").trim());
@@ -80,8 +82,6 @@ public class ActivityPopup extends AbstractPopup{
             this.dismiss();
         }
     }
-
-
 
     public Button getActivitySubmit() {
         return activitySubmit;
